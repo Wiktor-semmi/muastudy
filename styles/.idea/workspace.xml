@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c0a6bc71-249e-4261-9d68-4558621c5a76" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/index.html" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Z83nMJi0Ln3wrQbWYTITdZt6vz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Projects it/Szkolenie/Модуль 6. Реализация проекта по ТЗ/1 Создание проекта с нуля/projekt/styles&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects it\Szkolenie\Модуль 6. Реализация проекта по ТЗ\1 Создание проекта с нуля\projekt\styles" />
+      <recent name="E:\Projects it\Szkolenie\Модуль 6. Реализация проекта по ТЗ\1 Создание проекта с нуля\projekt\static" />
+      <recent name="E:\Projects it\Szkolenie\Модуль 6. Реализация проекта по ТЗ\1 Создание проекта с нуля\projekt\scripts" />
+      <recent name="E:\Projects it\Szkolenie\Модуль 6. Реализация проекта по ТЗ\1 Создание проекта с нуля\projekt\styles\imajes" />
+      <recent name="E:\Projects it\Szkolenie\Модуль 6. Реализация проекта по ТЗ\1 Создание проекта с нуля\projekt\styles\fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects it\Szkolenie\Модуль 6. Реализация проекта по ТЗ\1 Создание проекта с нуля\projekt\assets" />
+      <recent name="E:\Projects it\Szkolenie\Модуль 6. Реализация проекта по ТЗ\1 Создание проекта с нуля\projekt\styles" />
+      <recent name="E:\Projects it\Szkolenie\Модуль 6. Реализация проекта по ТЗ\1 Создание проекта с нуля\projekt\scripts" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c0a6bc71-249e-4261-9d68-4558621c5a76" name="Changes" comment="" />
+      <created>1701790045309</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701790045309</updated>
+      <workItem from="1701790046705" duration="14071000" />
+      <workItem from="1701850660607" duration="33423000" />
+      <workItem from="1701977614781" duration="3000" />
+      <workItem from="1702041261029" duration="33000" />
+      <workItem from="1702052401108" duration="14639000" />
+      <workItem from="1702068407181" duration="2520000" />
+      <workItem from="1702119494373" duration="23115000" />
+      <workItem from="1702238917800" duration="4234000" />
+      <workItem from="1702278298806" duration="26902000" />
+      <workItem from="1702401919890" duration="15689000" />
+      <workItem from="1702457182531" duration="2499000" />
+      <workItem from="1702474078238" duration="19473000" />
+      <workItem from="1702539508051" duration="33008000" />
+      <workItem from="1702635564040" duration="6219000" />
+      <workItem from="1702726456486" duration="14456000" />
+      <workItem from="1702821099530" duration="6390000" />
+      <workItem from="1702838182491" duration="354000" />
+      <workItem from="1702838900384" duration="877000" />
+      <workItem from="1702839794167" duration="429000" />
+      <workItem from="1702840284642" duration="8396000" />
+      <workItem from="1702891229148" duration="3876000" />
+      <workItem from="1702989163396" duration="22764000" />
+      <workItem from="1703057770455" duration="2541000" />
+      <workItem from="1703338891543" duration="25802000" />
+      <workItem from="1703404602363" duration="21725000" />
+      <workItem from="1703523631999" duration="14596000" />
+      <workItem from="1703591094074" duration="6016000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
