@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en-ru">
+<head>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta content="true" name="HandheldFriendly"/>
+    <meta content="width" name="MobileOptimized"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/animate.min.css">
+    <link rel="stylesheet" href="styles/hover-min.css">
+    <link rel="stylesheet" href="styles/slick.css"/>
+    <link rel="stylesheet" href="styles/slick-theme.css"/>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/adaptive.css">
+</head>
+<body>
+<header>
+    <div class="container cont">
+        <div class="content-content">
+            <div class="menu" id="menu">
+                <div class="menu-curs">
+                    <a href="#" id="curs">Курсы</a>
+                </div>
+                <div class="menu-lecturer">
+                    <a href="#" id="lector">Преподователи</a>
+                </div>
+                <div class="menu-reviews">
+                    <a href="#" id="reviews">Отзывы</a>
+                </div>
+                <div class="close">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+			c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+			c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+			L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+			c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+			c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+			c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
+	</g>
+</g>
+</svg>
+
+                </div>
+            </div>
+            <div class="menu-menu" id="menu-menu">
+                <img src="assets/images/menu.png" alt="">
+            </div>
+
+            <div class="logo">
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="114px" height="23px">
+                    <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="16px" x="9px"
+                          y="11.957px">
+                        <tspan font-size="16px" font-family="Bicubik" fill="#A698A6">Mua</tspan>
+                        <tspan font-size="16px" font-family="Bicubik" fill="#FFFEFE">Study</tspan>
+                    </text>
+                    <image x="0px" y="16px" width="114px" height="7px"
+                           xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHIAAAAHCAMAAADj7Ok9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABGlBMVEWDp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp73////dUf+4AAAAXHRSTlMAAREeJTM4REpVXWZwd4OIlZmmqrK7vszb3efu7yJ2go21wc3p9QwjTGB1h5ipusvcCSE6T2N6j6O3zuP3DSlCXJCn1/HmEi5pofTVyJuJakMrEwgCAw4bMkksFfdv9cIAAAABYktHRF2d3zABAAAAB3RJTUUH5wwFEQ4OUWRVZwAAAMxJREFUKM9jYKAGYGRiZmFlY+fg5OLm4eXjFxAUEhYWERUVExcXl5CUlJKGApkYECDLBiZZVnZObjl5BUFhRSVlSRXVGFIAkZaoqbNpaGpp6+jq6RtIk2QBSVYaGhmbmJqZW1haWdtQaAt+K23t7B20HJ2UnF1IMgcWXdKukoQAzCY3dw0PPk8xZy8XaWtJb3EfUT1hYV9BQT9+fnleXl5/bm5TTk5ODnb2AFZW1kBZWdkgJhAIJisphIQyhoVHREYGsEbJRjNRJf0SAAAlpG6ZedgpMgAAAABJRU5ErkJggg=="/>
+                </svg>
+            </div>
+            <div class="menu-next">
+                <div class="svg">
+                    <img src="assets/images/placeholder.png" alt="">
+                </div>
+
+                <div class="svg-text">
+                    <div class="local">Самара</div>
+                    <div class="local-address">Ленина 15, оф.508</div>
+                </div>
+                <div>
+                    <div class="coll">+7 (846) 545-88-95</div>
+                    <div class="coll-in">
+                        <img src="assets/images/phone-call.png" class="wow pulse__animated" alt="MIT License">
+                        <a href="#">Заказать звонок</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+<section>
+    <div class="container-container cont">
+        <div class="info ">
+            <div class="title">
+                <div class="title-text">
+                    <h1>Курсы визажистов</h1>
+                </div>
+                <div class="title-title">
+                    <div class="title-text-p">
+                        <p>Научись подчеркивать красоту своими руками</p>
+                    </div>
+                    <div class="title-button">
+                        <button class="button" id="button">Выбрать курс</button>
+                    </div>
+                </div>
+            </div>
+            <div class="title-image">
+                <img class="title-image-img" src="assets/images/foto.png">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section cont">
+    <div class="section-container">
+        <div class="info-info-title">
+            <h2>Вы научитесь</h2>
+        </div>
+        <div class="info-info">
+            <div class="info-info-image">
+                <img src="assets/images/foto2.png" alt="">
+            </div>
+            <div class="info-info-text-a info-t">
+                <img src="assets/images/elips-a.png">
+                <span>Разбираться в важных аспектах ухода за кожей лица</span>
+            </div>
+            <div class="info-info-text-b info-t">
+                <img src="assets/images/elips-b.png">
+                <span>Выполнять грамотный контуринг</span></div>
+            <div class="info-info-text-c info-t">
+                <img src="assets/images/elips-c.png">
+                <span>Подчеркивать достоинства внешности</span></div>
+            <div class="info-info-text-d info-t">
+                <img src="assets/images/elips-d.png">
+                <span>Разбираться в тонкостях макияжа и использования  декоративных косметических средств</span>
+            </div>
+        </div>
+        <div class="bonus-end-img">
+            <img src="assets/images/decor.png" alt="">
+        </div>
+    </div>
+</section>
+<section>
+    <div class="bonus cont">
+        <div class="bonus-end">
+
+            <div class="bonus-end-text">
+                <img src="assets/images/elips-end.png" alt="">
+            </div>
+            <div class="bonus-text-text">
+                <p>После окончания курса, вы получите персональный <span>сертификат,</span> а также
+                    <span>набор кистей</span> (12 штук) в подарок, что поможет вам скорее начать свою
+                    профессиональную
+                    деятельность</p>
+            </div>
+            <div class="bonus-fair">
+                <img src="assets/images/Makeup.png" alt="">
+            </div>
+        </div>
+    </div>
+
+</section>
+<section>
+    <div class="advantages cont">
+        <div class="advantages-container">
+            <div class="advantages-title">
+                <h2>наши преимущества</h2>
+            </div>
+            <div class="advantages-info ad-in-a">
+                <div class="advantages-info-image">
+                    <img src="assets/images/foto3.png" alt="">
+                </div>
+                <div class="advantages-img">
+                    <div class="class-a">
+                        <div class="advantages-info-text-img">
+                            <img src="assets/images/elips-advantages.png">
+                        </div>
+                        <div class="advantages-info-text-a advantages-text">
+                            <span>На время обучения выдаются все  профессиональные материалы  и косметика</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="advantages-img">
+                    <div class="class-b">
+                        <div class="advantages-info-text-img">
+                            <img src="assets/images/elips-advantages.png">
+                        </div>
+                        <div class="advantages-info-text-b advantages-text">
+                            <span>Практикующие педагоги</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="advantages-img">
+                    <div class="class-c">
+                        <div class="advantages-info-text-img">
+                            <img src="assets/images/elips-advantages.png">
+                        </div>
+                        <div class="advantages-info-text-c advantages-text">
+                            <span>Мини-группы от 2-х до 5-ти человек</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="advantages-img">
+                    <div class="class-d">
+                        <div class="advantages-info-text-img">
+                            <img src="assets/images/elips-advantages.png">
+                        </div>
+                        <div class="advantages-info-text-d advantages-text">
+                            <span>Практика на каждом уроке</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="advantages-img">
+                    <div class="class-f">
+                        <div class="advantages-info-text-img">
+                            <img src="assets/images/elips-advantages.png">
+                        </div>
+                        <div class="advantages-info-text-f advantages-text">
+                            <span>Индивидуальный подход</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="advantages-img">
+                    <div class="class-e">
+                        <div class="advantages-info-text-img">
+                            <img src="assets/images/elips-advantages.png">
+                        </div>
+                        <div class="advantages-info-text-e advantages-text">
+                            <span>Научим основам продвижения себя  как мастера</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container-program cont">
+        <div class="program">
+            <div>
+                <div class="program-title wow animate__pulse">
+                    <h2>программы обучения</h2>
+                </div>
+                <div class="program-text">
+                    <p>На курсах визажиста вы сможете овладеть всеми необходимыми знананиями и навыками для создания
+                        необходимиго образа. Мы обязательно научим вас, как правильно наносить профиссионольный
+                        макияж.</p>
+                </div>
+            </div>
+            <div class="program-cards">
+                <div class="program-card">
+                    <div>
+                        <span>Групповое обучение</span>
+                        <h3>Профессиональный макияж для начинающих</h3>
+                        <ul>
+                            <li>Введение. Теоретический блок</li>
+                            <li>Морфология лица (строение и его особенности)</li>
+                            <li>Уход за кожей и подбор косметики (базовые понятия, составы разлиячных косметичемких
+                                средств и
+                                их эффективность)
+                            </li>
+                            <li>Естественный макияж (в стиле nude)</li>
+                            <li>Макияж со стрелками (грамотный подбор стрелок по форме глаз)</li>
+                            <li>Психология общения с клиентом, как правильно продвигать себя</li>
+                        </ul>
+                    </div>
+                    <div class="line"></div>
+                    <div class="program-card-p">
+                        <p>2 месяца (16 занятий по 2,5 часа)</p>
+                        <p>Цена: 25 000 рублей</p>
+                        <button class="button-a hvr-shutter-out-vertical" id="button-a">Записаться</button>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div>
+                        <span>Групповое обучение</span>
+                        <h3>Профессиональный макияж для практикующих</h3>
+                        <ul>
+                            <li>Авторские наработки</li>
+                            <li>Работа с цветом (расстановка акцентов)</li>
+                            <li>Сложное текстурирование (работа с кремовыми тенями, карандашом, пигментами)</li>
+                            <li>Тренды (для fashion, beauty-съемок)</li>
+                            <li>Психология общения с клиентом, как правильно продвигать себя</li>
+                        </ul>
+                    </div>
+                    <div class="line"></div>
+                    <div class="program-card-p">
+                        <p>1 месяц (8 занятий по 2,5 часа)</p>
+                        <p>Цена: 10 000 рублей</p>
+                        <button class="button-b hvr-shutter-out-vertical" id="button-b">Записаться</button>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="line-in">
+                        <span class="span-a">Индивидуальное обучение</span>
+                        <h3>Макияж для себя</h3>
+                        <ul class="line-ul">
+                            <li>Основы косметологии (уход за кожей, подготовка кожи, демакияж)</li>
+                            <li>Разбор вашей косметички</li>
+                            <li>Моделирование и способы коррекции вашего типа лица</li>
+                            <li>Дневной макияж (отработка на себе)</li>
+                            <li>Вечерний макияж (отработка на себе)</li>
+                        </ul>
+                    </div>
+                    <div class="line"></div>
+                    <div class="program-card-p">
+                        <p>1 занятие (4 часа)</p>
+                        <p>Цена: 3000 рублей</p>
+                        <button class="button-c hvr-shutter-out-vertical" id="button-c">Записаться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="teacher cont">
+        <div class="container-teacher">
+            <div class="teacher-title">
+                <h2>наши преподаватели</h2>
+            </div>
+            <div class="teacher-name">
+                <div class="teacher-name-a">
+                    <div class="teacher-a-person">
+                        <div class="teacher-a-person-img">
+                            <img src="assets/images/photo-a.png" alt="">
+                        </div>
+                        <div class="teacher-person-name">
+                            <h3>Анна Пекова</h3>
+                            <p>Визажист-стилист</p>
+                            <span>Практикует с 2008 года</span>
+                        </div>
+                    </div>
+                    <div class="teacher-person-text">
+                        <h3>Преподаватель курсов:</h3>
+                        <ul>
+                            <li>Профессиональный макияж для начинающих</li>
+                            <li>Макияж для себя</li>
+                        </ul>
+                    </div>
+                    <div class="person-text">
+                        <span>Мастер международного класса. Знает множество бьюти секретов 
+                              и хитростей, стилист, который сделает из обычной девушки настоящую королеву красоты.</span>
+                    </div>
+                    <div class="person-person">
+                        <div class="person-a-img-a wow animate__lightSpeedInLeft">
+                            <img src="assets/images/photo-a-a.png" alt="">
+                        </div>
+                        <div class="person-a-img-b wow animate__lightSpeedInLeft">
+                            <img src="assets/images/photo-a-b.png" alt="">
+                        </div>
+
+                        <div class="person-a-img-c wow animate__lightSpeedInLeft">
+                            <img src="assets/images/photo-a-c.png" alt="">
+                        </div>
+                    </div>
+                    <p class="person-job">Работы Анны</p>
+                </div>
+                <div class="teacher-name-b">
+                    <div class="teacher-b-person">
+                        <div class="teacher-b-person-img">
+                            <img src="assets/images/photo-b.png" alt="">
+                        </div>
+                        <div class="teacher-person-name">
+                            <h3>Анастасия Морозова</h3>
+                            <p>Визажист</p>
+                            <span>Практикует с 2013 года</span>
+                        </div>
+                    </div>
+                    <div class="teacher-person-text">
+                        <h3>Преподаватель курсов:</h3>
+                        <ul>
+                            <li>Профессиональный макияж для начинающих</li>
+                            <li>Профессиональный макияж для практикующих</li>
+                        </ul>
+                    </div>
+                    <div class="person-text">
+                        <span>Мастер международного класса. Знает, как привнести эстетику и красоту
+                              в массы. Учит понимать и подчеркивать красоту любой девушки.</span>
+                    </div>
+                    <div class="person-person">
+                        <div class="person-b-img-a wow animate__lightSpeedInRight">
+                            <img src="assets/images/photo-b-a.png" alt="">
+                        </div>
+                        <div class="person-b-img-b wow animate__lightSpeedInRight">
+                            <img src="assets/images/photo-b-b.png" alt="">
+                        </div>
+
+                        <div class="person-b-img-c wow animate__lightSpeedInRight">
+                            <img src="assets/images/photo-b-c.png" alt="">
+                        </div>
+                    </div>
+                    <p class="person-job">Работы Анастасии</p>
+                </div>
+            </div>
+            <div class="container-teacher-decor-b">
+                <img src="assets/images/make-up.png" alt="">
+            </div>
+            <div class="container-teacher-decor-a">
+                <img src="assets/images/elips-9.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="studio">
+        <div class="studio-container">
+            <div class="studio-container-text">
+                <div class="studio-text">
+                    <h2>наши студии</h2>
+                </div>
+                <!--                <div class="studio-teacher-decor-a">-->
+                <!--                    <img src="styles/images/elips-9.png" alt="">-->
+                <!--                </div>-->
+            </div>
+            <div class="slider">
+                <div class="slider_item">
+                    <img src="assets/images/foto-sale1.png" alt="">
+                </div>
+
+                <div class="slider_item">
+                    <img src="assets/images/foto-sale2.png" alt="">
+                </div>
+
+                <div class="slider_item">
+                    <img src="assets/images/foto-sale3.png" alt="">
+                </div>
+
+                <div class="slider_item">
+                    <img src="assets/images/foto-sale4.png" alt="">
+                </div>
+
+                <div class="slider_item">
+                    <img src="assets/images/foto-sale5.png" alt="">
+                </div>
+
+                <div class="slider_item">
+                    <img src="assets/images/foto-sale6.png" alt="">
+                </div>
+
+                <div class="slider_item">
+                    <img src="assets/images/foto-sale7.png" alt="">
+                </div>
+
+                <div class="slider_item">
+                    <img src="assets/images/foto-sale8.png" alt="">
+                </div>
+
+                <div class="slider_item">
+                    <img src="assets/images/foto-sale9.png" alt="">
+                </div>
+                <div class="slider_item">
+                    <img src="assets/images/foto-sale10.png" alt="">
+                </div>
+                <div class="slider_item">
+                    <img src="assets/images/foto-sale11.png" alt="">
+                </div>
+                <div class="slider_item">
+                    <img src="assets/images/foto-sale12.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="reviews cont">
+        <div class="container-reviews">
+            <div>
+                <div>
+                    <div class="reviews-title">
+                        <h2>отзывы</h2>
+                    </div>
+                </div>
+                <div class="slider">
+                    <div class="reviews-name">
+                        <div class="reviews-name-object">
+                            <div class="reviews-name-img">
+                                <img src="assets/images/Alena.png" alt="">
+                            </div>
+                            <div class="reviews-name-a">
+                                <div class="reviews-name-name">
+                                    <h3>Алена</h3>
+                                </div>
+                                <div class="reviews-name-age">
+                                    <span>21 год</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="reviews-name-alena-text">
+                            <p>Прошла курс «Макияж для себя». Спасибо Анне за вдохновение, интересные «фишки» и ценные
+                                советы!</p>
+                        </div>
+                    </div>
+                    <div class="reviews-name">
+                        <div class="reviews-name-object">
+                            <div class="reviews-name-img">
+                                <img src="assets/images/Victoria.png" alt="">
+                            </div>
+                            <div class="reviews-name-a">
+                                <div class="reviews-name-name">
+                                    <h3>Виктория</h3>
+                                </div>
+                                <div class="reviews-name-age">
+                                    <span>27 лет</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="reviews-name-alena-text">
+                            <p>Я просто в восторге! Спасибо Анастасии за эти прекрасные 2 месяца. Иногда было трудно,
+                                но поддержка преподавателя и атмосфера
+                                в группе всегда помогали. Я с гордостью могу сказать, что я профессионал и уже пробовала
+                                себя в деле!</p>
+                        </div>
+                    </div>
+                    <div class="reviews-name">
+                        <div class="reviews-name-object">
+                            <div class="reviews-name-img">
+                                <img src="assets/images/Lubov.png" alt="">
+                            </div>
+                            <div class="reviews-name-a">
+                                <div class="reviews-name-name">
+                                    <h3>Любовь</h3>
+                                </div>
+                                <div class="reviews-name-age">
+                                    <span>32 года</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="reviews-name-alena-text">
+                            <p>Курс по макияжу, продвинутый уровень закончился неделю назад, а я до сих пор под
+                                впечатлением». Хочу выразить благодарность этой школе, за кучу положительных эмоций,
+                                опыт,
+                                вдохновение, расширение границ сознания. Желаю вам творческих успехов</p>
+
+                        </div>
+                        <div>
+                            <a href="#" class="reviews-slider">Читать полностью</a>
+                        </div>
+                    </div>
+
+                    <div class="reviews-name">
+                        <div class="reviews-name-object">
+                            <div class="reviews-name-img">
+                                <img src="assets/images/anzej.png" alt="">
+                            </div>
+                            <div class="reviews-name-a">
+                                <div class="reviews-name-name">
+                                    <h3>Андрей</h3>
+                                </div>
+                                <div class="reviews-name-age">
+                                    <span>23 года</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="reviews-name-alena-text">
+                            <p>Приходил обучение у визажиста Анастасии. Всё понравилось. Спокойно, профессионально,
+                                результатом доволен.</p>
+                        </div>
+                    </div>
+
+                    <div class="reviews-name">
+                        <div class="reviews-name-object">
+                            <div class="reviews-name-img">
+                                <img src="assets/images/konstantin.png" alt="">
+                            </div>
+                            <div class="reviews-name-a">
+                                <div class="reviews-name-name">
+                                    <h3>Константин</h3>
+                                </div>
+                                <div class="reviews-name-age">
+                                    <span>43 годa</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="reviews-name-alena-text">
+                            <p>Спасибо Анне за отличную работу! Проходил обучение, результатом доволен! Внимательная,
+                                вежливая,
+                                настоящий мастер своего дела! Желаю удачи и успехов в работе!</p>
+                        </div>
+                    </div>
+
+                    <div class="reviews-name">
+                        <div class="reviews-name-object">
+                            <div class="reviews-name-img">
+                                <img src="assets/images/svetlana.png" alt="">
+                            </div>
+                            <div class="reviews-name-a">
+                                <div class="reviews-name-name">
+                                    <h3>Светлана</h3>
+                                </div>
+                                <div class="reviews-name-age">
+                                    <span>29 лет</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="reviews-name-alena-text">
+                            <p>"Те знания, которые я получила в вашей школе помогают мне каждый день в моей работе - это
+                                основа основ, которые неизменны и никогда не подведут! Я благодарна Вам лично за науку и
+                                всегда хочется поприсутствовать на глобальных мероприятиях вашей школы Не загадываю на
+                                будущее, но надеюсь, что удастся когда-нибудь посотрудничать🤝"</p>
+                        </div>
+                    </div>
+
+                    <div class="reviews-name">
+                        <div class="reviews-name-object">
+                            <div class="reviews-name-img">
+                                <img src="assets/images/ketrin.png" alt="">
+                            </div>
+                            <div class="reviews-name-a">
+                                <div class="reviews-name-name">
+                                    <h3>Катерина</h3>
+                                </div>
+                                <div class="reviews-name-age">
+                                    <span>32 года</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="reviews-name-alena-text">
+                            <p>Анна- прекрасный мастер по макияжу. Внимательная, позитивная и приятная. Не ожидала
+                                такого
+                                результата! Профессионал в своем деле!!</p>
+                        </div>
+                    </div>
+
+                    <div class="reviews-name">
+                        <div class="reviews-name-object">
+                            <div class="reviews-name-img">
+                                <img src="assets/images/helen.png" alt="">
+                            </div>
+                            <div class="reviews-name-a">
+                                <div class="reviews-name-name">
+                                    <h3>Елена</h3>
+                                </div>
+                                <div class="reviews-name-age">
+                                    <span>31 год</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="reviews-name-alena-text">
+                            <p>"Я хочу искренне поблагодарить всех, кто встретился мне на пути к мечте.В первую очередь,
+                                спасибо Анастасии Морозовой, Анастасия - мой первый учитель, Спасибо тебе за терпение,
+                                время
+                                и знания.
+                                Самый важный опыт и навыки были приобретены в её студии, под её чутким
+                                руководством." </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="gallery cont">
+        <div class="container-gallery">
+            <div class="gallery-title">
+                <h2>вдохновитесь работами
+                    наших учеников</h2>
+            </div>
+            <div class="gallery-imj">
+                <div class="gallery-imag-a">
+                    <div class="gallery-img-a wow animate__lightSpeedInLeft"><img src="assets/images/gal-1.png" alt="">
+                    </div>
+                    <div class="gallery-img-b wow animate__lightSpeedInLeft"><img src="assets/images/gal-2.png" alt="">
+                    </div>
+                    <div class="gallery-img-c wow animate__lightSpeedInLeft"><img src="assets/images/gal-3.png" alt="">
+                    </div>
+                    <div class="gallery-img-d wow animate__lightSpeedInLeft"><img src="assets/images/gal-4.png" alt="">
+                    </div>
+                </div>
+                <div class="gallery-imag-b">
+                    <div class="gallery-imgs-a wow animate__lightSpeedInRight"><img src="assets/images/gal-7.png"
+                                                                                    alt=""></div>
+                    <div class="gallery-imgs-b wow animate__lightSpeedInRight"><img src="assets/images/gal-6.png"
+                                                                                    alt=""></div>
+                    <div class="gallery-imgs-c wow animate__lightSpeedInRight"><img src="assets/images/gal-5.png"
+                                                                                    alt=""></div>
+
+                </div>
+            </div>
+            <div class="gallery-order">
+                <div class="gallery-order-text">
+                    <h3>Оставьте свои данные, и мы вам перезвоним, чтобы уточнить условия оплаты и записать
+                        на обучение</h3>
+                </div>
+                <div class="gallery-order-order" id="form">
+                    <div class="gallery-order-a"><input type="text" placeholder="Ваше имя" id="name"></div>
+                    <div class="gallery-order-b"><input type="number" placeholder="+7 (846) _ _ _-_ _-_ _" id="phone">
+                    </div>
+                    <button class="button-button hvr-shutter-out-vertical" id="create-order">Отправить</button>
+                </div>
+            </div>
+            <div class="gallery-decor">
+                <img src="assets/images/decor-foot.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="footer-container cont">
+        <div class="footer-container-info">
+            <div class="footer-info-text">
+                <h3>Наши контакты</h3>
+                <p>Ленина 15, оф.508</p>
+                <p>+7 (846) 545-88-95</p>
+                <p>muastudy@mail.ru</p>
+            </div>
+            <div class="footer-info-icon">
+                <img src="assets/images/instogram.png" alt="">
+                <img src="assets/images/teleegram.png" alt="">
+                <img src="assets/images/vabier.png" alt="">
+            </div>
+            <div class="footer-logo">
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="114px" height="23px">
+                    <text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" font-size="16px" x="9px"
+                          y="11.957px">
+                        <tspan font-size="16px" font-family="Bicubik" fill="#A698A6">Mua</tspan>
+                        <tspan font-size="16px" font-family="Bicubik" fill="#FFFEFE">Study</tspan>
+                    </text>
+                    <image x="0px" y="16px" width="114px" height="7px"
+                           xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHIAAAAHCAMAAADj7Ok9AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABGlBMVEWDp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp72Dp73////dUf+4AAAAXHRSTlMAAREeJTM4REpVXWZwd4OIlZmmqrK7vszb3efu7yJ2go21wc3p9QwjTGB1h5ipusvcCSE6T2N6j6O3zuP3DSlCXJCn1/HmEi5pofTVyJuJakMrEwgCAw4bMkksFfdv9cIAAAABYktHRF2d3zABAAAAB3RJTUUH5wwFEQ4OUWRVZwAAAMxJREFUKM9jYKAGYGRiZmFlY+fg5OLm4eXjFxAUEhYWERUVExcXl5CUlJKGApkYECDLBiZZVnZObjl5BUFhRSVlSRXVGFIAkZaoqbNpaGpp6+jq6RtIk2QBSVYaGhmbmJqZW1haWdtQaAt+K23t7B20HJ2UnF1IMgcWXdKukoQAzCY3dw0PPk8xZy8XaWtJb3EfUT1hYV9BQT9+fnleXl5/bm5TTk5ODnb2AFZW1kBZWdkgJhAIJisphIQyhoVHREYGsEbJRjNRJf0SAAAlpG6ZedgpMgAAAABJRU5ErkJggg=="/>
+                </svg>
+            </div>
+            <div class="maps">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A019669303fa5d91d883ddd904731808cb829a011670d538d68bbbffe74dd9cb3&amp;source=constructor"
+                        width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="scripts/jquery-3.7.1.min.js"></script>
+<script src="scripts/wow.min.js"></script>
+<script src="scripts/slick.min.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>
